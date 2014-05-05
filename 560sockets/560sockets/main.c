@@ -22,22 +22,22 @@ int main(int argc, const char * argv[])
         int a;//4
         char b;//1
         float c;
-
+        
     };
     
     struct sharknado s;
- 
-  
-
-//    int sockfd = socket(AF_INET, SOCK_STREAM, 0);
-//    if(!sockfd) error("socket");
-//    
+    
+    
+    
+    //    int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    //    if(!sockfd) error("socket");
+    //
     struct sockaddr_in my_addr, peer_addr;
-//    memset(&my_addr, 0, sizeof(struct sockaddr_in));
-//    
-//    if (bind(sockfd, (struct sockaddr *) &my_addr,
-//             sizeof(struct sockaddr_in)) == -1)
-//        error("bind");
+    //    memset(&my_addr, 0, sizeof(struct sockaddr_in));
+    //
+    //    if (bind(sockfd, (struct sockaddr *) &my_addr,
+    //             sizeof(struct sockaddr_in)) == -1)
+    //        error("bind");
     
     int sockfd=make_socket(8081);
     
@@ -52,11 +52,11 @@ int main(int argc, const char * argv[])
         socklen_t peer_addr_size;
         peer_addr_size = sizeof(struct sockaddr_in);
         int newsockfd = accept(sockfd, (struct sockaddr *) &peer_addr,
-                     &peer_addr_size);
+                               &peer_addr_size);
         if (newsockfd == -1)
             error("accept");
         
-    
+        
         char buffer[256];
         bzero(buffer,256);
         int n = read(newsockfd,&s,sizeof(s));
