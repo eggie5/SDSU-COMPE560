@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A7F60ADB-8AB8-42D0-A46D-93B2F5A83EF8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>560sockets</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1B2EC185-C067-40E2-8B47-F578FA1C7E77</key>
+		<string>ssh://github.com/eggie5/SDSU-COMPE560.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>560sockets/560sockets.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1B2EC185-C067-40E2-8B47-F578FA1C7E77</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/eggie5/SDSU-COMPE560.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1B2EC185-C067-40E2-8B47-F578FA1C7E77</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1B2EC185-C067-40E2-8B47-F578FA1C7E77</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SDSU-COMPE560</string>
+		</dict>
+	</array>
+</dict>
+</plist>
