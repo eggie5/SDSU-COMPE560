@@ -53,11 +53,13 @@ int _main(int argc, char *argv[])
     serv_addr.sin_port = htons(portno);
     if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0) 
         _error("ERROR connecting");
-    printf("Please enter the message: ");
-    bzero(buffer,256);
-    fgets(buffer,255,stdin);
+    
+//    printf("Please enter the message: ");
+//    bzero(buffer,256);
+//    fgets(buffer,255,stdin);
+    
     //The only difference between send() and write() is the presence of flags. With zero flags parameter, send() is equivalent to write()
-    n = write(sockfd,(char *)&s,sizeof(s));
+    n = write(sockfd,(char *)&s, sizeof(s));
     if (n < 0) 
          _error("ERROR writing to socket");
     bzero(buffer,256);
