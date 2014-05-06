@@ -25,7 +25,7 @@ int main(int argc, const char * argv[])
     
     const char * name=argv[2];
     
-
+    
     printf("starting server...\n");
     
     
@@ -34,7 +34,7 @@ int main(int argc, const char * argv[])
         int a;//4
         char b;//1
         float c;
-
+        
     };
     
     struct sharknado s;
@@ -65,17 +65,17 @@ int main(int argc, const char * argv[])
     
     //end setup client
     
-  
-
-//    int sockfd = socket(AF_INET, SOCK_STREAM, 0);
-//    if(!sockfd) error("socket");
-//    
+    
+    
+    //    int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    //    if(!sockfd) error("socket");
+    //
     struct sockaddr_in my_addr, peer_addr;
-//    memset(&my_addr, 0, sizeof(struct sockaddr_in));
-//    
-//    if (bind(sockfd, (struct sockaddr *) &my_addr,
-//             sizeof(struct sockaddr_in)) == -1)
-//        error("bind");
+    //    memset(&my_addr, 0, sizeof(struct sockaddr_in));
+    //
+    //    if (bind(sockfd, (struct sockaddr *) &my_addr,
+    //             sizeof(struct sockaddr_in)) == -1)
+    //        error("bind");
     
     int sockfd=make_socket(server_portno);
     
@@ -90,22 +90,23 @@ int main(int argc, const char * argv[])
         socklen_t peer_addr_size;
         peer_addr_size = sizeof(struct sockaddr_in);
         int newsockfd = accept(sockfd, (struct sockaddr *) &peer_addr,
-                     &peer_addr_size);
+                               &peer_addr_size);
         if (newsockfd == -1)
             error("accept");
         
-    
+        
         char buffer[256];
         bzero(buffer,256);
         //blocking read
         int n = read(newsockfd,&s,sizeof(s));
         if (n < 0) error("ERROR reading from socket");
         //printf("Here is the message: %s\n",buffer);
+        //s.a=ntohs(s.a);
         
         printf("before:\ta=%d, b=%c, c=%f\n", s.a, s.b, s.c);
         
         //increment a
-        s.a=s.a<<1;
+        s.a=s.a<< 1;
         s.b=s.b+1;
         s.c=s.c+1;
         
@@ -120,7 +121,7 @@ int main(int argc, const char * argv[])
         //connect & write to 3rd party server
         if (connect(csockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0)
             error("ERROR connecting (remote server)");
-
+        
         n = write(csockfd,(char *)&s, sizeof(s));
         if (n < 0)
             error("ERROR writing to csocket");
@@ -180,7 +181,7 @@ void client_mode(char * servers, int port)
         error("ERROR reading from socket");
     printf("%s\n",buffer);
     return;
-
+    
 }
 
 int

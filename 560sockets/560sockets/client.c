@@ -11,7 +11,7 @@
 
 void _error(char *msg){perror(msg);exit(0);}
 
-int _main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     struct sharknado
     {
