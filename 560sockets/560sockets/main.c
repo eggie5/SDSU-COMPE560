@@ -41,27 +41,27 @@ int main(int argc, const char * argv[])
     
     
     //setup client
-    int csockfd, portno;
-    struct sockaddr_in serv_addr;
-    struct hostent *server;
-    
-    portno = atoi(argv[3]);
-    csockfd = socket(AF_INET, SOCK_STREAM, 0);
-    if (csockfd < 0)
-        error("ERROR opening socket (remote)");
-    server = gethostbyname(argv[2]);
-    if (server == NULL) {
-        fprintf(stderr,"ERROR, no such host\n");
-        exit(0);
-    }
-    
-    bzero((char *) &serv_addr, sizeof(serv_addr));
-    serv_addr.sin_family = AF_INET;
-    bcopy((char *)server->h_addr,
-          (char *)&serv_addr.sin_addr.s_addr,
-          server->h_length);
-    
-    serv_addr.sin_port = htons(portno);
+//    int csockfd, portno;
+//    struct sockaddr_in serv_addr;
+//    struct hostent *server;
+//    
+//    portno = atoi(argv[3]);
+//    csockfd = socket(AF_INET, SOCK_STREAM, 0);
+//    if (csockfd < 0)
+//        error("ERROR opening socket (remote)");
+//    server = gethostbyname(argv[2]);
+//    if (server == NULL) {
+//        fprintf(stderr,"ERROR, no such host\n");
+//        exit(0);
+//    }
+//    
+//    bzero((char *) &serv_addr, sizeof(serv_addr));
+//    serv_addr.sin_family = AF_INET;
+//    bcopy((char *)server->h_addr,
+//          (char *)&serv_addr.sin_addr.s_addr,
+//          server->h_length);
+//    
+//    serv_addr.sin_port = htons(portno);
     
     //end setup client
     
